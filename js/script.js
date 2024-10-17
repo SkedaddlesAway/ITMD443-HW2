@@ -6,5 +6,6 @@ function validateForm(){
       alert("All fields must be filled out!");
       return false;
     } 
-    return true;
+    alert("Welcome "+fname);
+      return true;
   } 
