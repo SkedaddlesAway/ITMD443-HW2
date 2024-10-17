@@ -1,0 +1,195 @@
+* {
+  color: #fff;
+}
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: #c3b9c3;
+}
+body{
+  background-image: linear-gradient(rgba(0,0,0, 0.5), rgba(118, 64, 115, 0.5)),url(..\images\pexels-anniroenkae-3109807.jpg);
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+nav {
+  width: 100%;
+  margin: auto;
+  padding: 25px 0;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+}
+nav p{
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+}
+nav p a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+nav p a ::after {
+  content: "";
+  height: 3px;
+  width: 0%;
+  background: #c82c84;
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  transition: 0.5s;
+}
+nav p a:hover:after {
+  width: 100%;
+}
+
+/* header */
+h1 {
+  width: 99%;
+  position: absolute;
+  top: 20%;
+  text-align: center;
+  font-size: 50px;
+  font-style: oblique;
+  text-transform: capitalize;
+  padding: 5px;
+  transition: 0.5s;
+}
+
+
+/* grid */
+.page-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr ;
+  grid-template-rows: 200px 200px  ;
+  grid-gap: 0px;
+}
+#Title{
+  grid-column: 2 / span 2;
+  grid-row: 0;
+}
+#Pitch{
+  grid-column: 2 / span 1;
+  grid-row: 2;
+}
+form{
+  grid-column: 3 / span 1;
+  grid-row: 2;
+}
+
+/* sign up form blurb */
+h3 {
+  font-size: 23px;
+  padding: 10px;
+  font-weight: bold;
+}
+p {
+  font-size: 15px;
+  text-indent: 15px;
+  line-height: 1.15;
+}
+.subtitle {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s;
+}
+.head, .signup {
+  padding: 20px;
+  width: 100%;
+}
+.head {
+  text-align: center;
+  background-color: #000;
+}
+.signup {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+input {
+  width: 95%;
+  margin: 5px 0px 5px 5px ;
+  padding: 2px;
+  border: none;
+  border-radius: 5px;
+  border-bottom: 3px solid #c82c84;
+  color: #000;
+}
+input[type="submit"] {
+  border: none;
+  width: 50%;
+  transform: translatex(50%);
+  color: #fff;
+  padding: 3px;
+  background-color: #c82c84;
+  transition: 0.5s;
+}
+input[type="submit"]:hover {
+  background-color: #a5286f;
+  transform: translatex(0%);
+  width: 100%;
+  transition: 0.5s;
+}
+
+
+@media (max-width: 920px) {
+  h1 {
+    top: 12%;
+    font-size: 3em;
+  }
+  .subtitle {
+    top: 55%;
+    flex-direction: column;
+  }
+  .head {
+    width: 100%;
+  }
+  nav {
+    background: rgba(0, 0, 0, 0.7);
+  }
+  .page-grid{
+    width: 90vw;
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 200px 200px 200px  ;
+    grid-gap: 0px;
+  }
+  #Title{
+    grid-column: 1 / span 1;
+    grid-row: 1;
+  }
+  #Pitch{
+    grid-column: 1 / span 1;
+    grid-row: 2;
+  }
+  form{
+    grid-column: 1 / span 1;
+    grid-row: 3;
+  }
+}
+@media (max-width: 500px) {
+  body {
+    background: #000;
+  }
+  #banner {
+    height: 40vh;
+  }
+  nav {
+    background-color: #000;
+  }
+  h1 {
+    top: 10%;
+  }
+  input[type="submit"] {
+    transform: translateX(0%);
+    width: 100%;
+  }
+  
+}
