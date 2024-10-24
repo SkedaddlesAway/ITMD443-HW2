@@ -6,7 +6,7 @@
 
 }
 body{
-  background-color: #dbd3db;
+  /* background-color: #dbd3db; */
 }
 
 #banner{
@@ -140,59 +140,11 @@ footer {
   color: white;
 }
 
-@media (max-width: 920px) {
-  h1 {
-    top: 12%;
-    font-size: 3em;
-  }
-  .subtitle {
-    top: 55%;
-    flex-direction: column;
-  }
-  #Pitch {
-    width: 100%;
-  }
-  nav {
-    background: rgba(0, 0, 0, 0.7);
-  }
-  
-  .page-grid{
-    width: 90vw;
-    display: grid;
-    grid-template-columns: .30fr 1.2fr .2fr;
-    grid-template-rows: 200px 200px 200px  ;
-    grid-gap: 0px;
-  }
-  #Title{
-    grid-column: 2 / span 1;
-    grid-row: 1;
-  }
-  #Pitch{
-    grid-column: 2 / span 1;
-    grid-row: 2;
-    text-align: center;
-  }
-  form{
-    grid-column: 2 / span 1;
-    grid-row: 3;
 
-  }
+/* Making Media Quearies Consistent */
+@media screen and (min-width: 768px) {
+  
 }
-@media (max-width: 500px) {
-  body {
-    background: #000;
-  }
-  #banner {
-    height: 40vh;
-  }
-  nav {
-    background-color: #000;
-  }
-  h1 {
-    top: 10%;
-  }
-  input[type="submit"] {
-    transform: translateX(0%);
-    width: 100%;
-  }
+@media screen and (min-width: 1200px) {
+  
 }
