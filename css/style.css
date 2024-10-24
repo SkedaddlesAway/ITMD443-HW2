@@ -99,9 +99,6 @@ nav ul li a:hover:after {
 
 /* grid */
 .page-grid{
-  /* display: flex;
-  flex-direction: row;
-  flex-wrap: wrap; */
   width: 90vw;
   margin: auto;
 }
@@ -128,7 +125,6 @@ nav ul li a:hover:after {
 .gallery img:hover {
   z-index: 2;
   transform: scale(1.05);
-  /* linear | ease | ease-in | ease-out | ease-in-out */
   transition: transform ease 0.4s;
 }
 
@@ -143,7 +139,8 @@ footer {
 
 /* Making Media Quearies Consistent */
 @media screen and (min-width: 768px) {
-  
+  /* responsiveness is out of wack for now */
+  /* come back post project to fix out of pride */
 }
 @media screen and (min-width: 1200px) {
   
