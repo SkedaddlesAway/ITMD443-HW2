@@ -1,18 +1,22 @@
 * {
-  color: #fff;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
 }
 body{
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  background-color: #c3b9c3;
+  background-color: #dbd3db;
 }
 
 #banner{
-  background-image: linear-gradient(rgba(0,0,0, 0.5), rgba(118, 64, 115, 0.5)),url(../images/pexels-anniroenkae-3109807.jpg);
+  background-image: linear-gradient(rgba(0,0,0, 0.5), rgba(118, 64, 115, 0.5)),url(../images/Pink-Marble-Background-47448178-1.png);
   width: 100%;
   height: 50vh;
   background-size:cover;
   background-position: center;
 }
+
 nav {
   width: 100%;
   margin: auto;
@@ -22,13 +26,15 @@ nav {
   background-color: rgba(0, 0, 0, 0.5);
   transition: 0.5s;
 }
-nav ul{
+nav ul li{
   list-style: none;
   display: inline-block;
   margin: 0 20px;
   position: relative;
 }
 nav ul li a{
+  
+  color: #fff;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -36,7 +42,7 @@ nav ul li a::after {
   content: "";
   height: 3px;
   width: 0%;
-  background: #c82c84;
+  background: #faa2d4;
   position: absolute;
   left: 0;
   bottom: -7px;
@@ -46,9 +52,10 @@ nav ul li a:hover:after {
   width: 100%;
 }
 
-/* header */
-h1 {
-  width: 99%;
+/* Page Title */
+#Title {
+  color: #fff;
+  width: 100%;
   position: absolute;
   top: 20%;
   text-align: center;
@@ -59,92 +66,78 @@ h1 {
   transition: 0.5s;
 }
 
-/* grid */
-.page-grid{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr ;
-  grid-template-rows: 100px 200px  ;
-  grid-gap: 0px;
-}
-#Title{
-  grid-column: 2 / span 2;
-  grid-row: 0;
-}
-#Pitch{
-  grid-column: 2 / span 1;
-  grid-row: 2;
-  background: #000;
-  height: 100%;
-  border: none;
-  border-radius: 5px;
-  padding: 10px;
-  text-align: center;
-}
-form{
-  grid-column: 3 / span 1;
-  grid-row: 2;
-  background: #000;
-  height: 100%;
-  border: none;
-  border-radius: 5px;
-  padding: 10px;
+/* About Us Intro Paragraph */
+#roundPhoto{
+  border-radius: 50%;
+  max-width: 25vw;
 }
 
-/* sign up form blurb */
-h3 {
-  font-size: 23px;
-  padding: 10px;
-  font-weight: bold;
-}
-p {
-  font-size: 15px;
-  text-indent: 15px;
-  line-height: 1.15;
-}
-.subtitle {
+.aboutUs{
   display: flex;
   flex-direction: row;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: 0.5s;
+  margin: 2%;
 }
-.head, .signup {
-  padding: 20px;
-  width: 100%;
-}
-.head {
+.aboutUs h2{
+  font-style: oblique;
+  font-size: x-large;
   text-align: center;
-  background-color: #000;
 }
-.signup {
-  background-color: rgba(0, 0, 0, 0.5);
+.aboutUs p{
+  padding: 2%;
+  text-align: justify;
 }
-
-input {
-  width: 95%;
-  margin: 5px 0px 5px 5px ;
-  padding: 2px;
-  border: none;
-  border-radius: 5px;
-  border-bottom: 3px solid #c82c84;
+#about{
+  height: fit-content;
+  transform: translateY(50%);
   color: #000;
 }
-input[type="submit"] {
-  border: none;
-  width: 50%;
-  transform: translatex(50%);
-  color: #fff;
-  padding: 3px;
-  background-color: #c82c84;
-  transition: 0.5s;
+.aboutUs img:hover {
+  transform: scale(1.05);
+  /* linear | ease | ease-in | ease-out | ease-in-out */
+  transition: transform  0.4s;
 }
-input[type="submit"]:hover {
-  background-color: #a5286f;
-  transform: translatex(0%);
-  width: 100%;
-  transition: 0.5s;
+
+/* grid */
+.page-grid{
+  /* display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; */
+  width: 90vw;
+  margin: auto;
+}
+
+
+/* Menu */
+
+
+/* gallery */
+.gallery{
+  display: inline-flex;
+  flex-flow: row nowrap;
+  height: 40vh;
+  overflow: auto;
+  white-space: nowrap;
+}
+.gallery img{
+  max-height: 100%;
+  max-width: 50%;
+  object-fit:cover;
+  vertical-align: bottom;
+  padding: 5px;
+}
+.gallery img:hover {
+  z-index: 2;
+  transform: scale(1.05);
+  /* linear | ease | ease-in | ease-out | ease-in-out */
+  transition: transform ease 0.4s;
+}
+
+/* A tiny little footer section */
+footer {
+  text-align: center;
+  padding: 2%;
+  background-color: #faa2d4;
+  color: white;
 }
 
 @media (max-width: 920px) {
@@ -156,7 +149,7 @@ input[type="submit"]:hover {
     top: 55%;
     flex-direction: column;
   }
-  .head {
+  #Pitch {
     width: 100%;
   }
   nav {
